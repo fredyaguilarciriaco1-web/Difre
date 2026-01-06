@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño de Vigas E.060 - Memoria Profesional</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+<div class="app">
+    <h2>Diseño de Vigas E.060<br><small>Ing- Fredy Aguilar C.</small></h2>
+
+    <div class="grid-inputs">
+        <label>Mu (tn·m) <input type="number" id="Mu" value="10"></label>
+        <label>f'c (kg/cm²) <input type="number" id="fc" value="210"></label>
+        <label>fy (kg/cm²) <input type="number" id="fy" value="4200"></label>
+        <label>Base b (cm) <input type="number" id="b" value="25"></label>
+        <label>Altura h (cm) <input type="number" id="h" value="50"></label>
+        <label>Recub. (cm) <input type="number" id="rec" value="4"></label>
+    </div>
+
+    <hr>
+    <div class="seccion-acero">
+        <p><b>Estribos:</b></p>
+        <select id="tipoEstribo">
+            <option value="1/4">Ø 1/4"</option>
+            <option value="3/8" selected>Ø 3/8"</option>
+            <option value="1/2">Ø 1/2"</option>
+        </select>
+        <span></span>
+    </div>
+
+    <div class="seccion-acero">
+        <p><b>Superior:</b></p>
+        <select id="barraTipoSup">
+            <option value="3/8">Ø 3/8"</option>
+            <option value="1/2" selected>Ø 1/2"</option>
+            <option value="5/8">Ø 5/8"</option>
+            <option value="3/4">Ø 3/4"</option>
+        </select>
+        <input type="number" id="nSup" value="2">
+    </div>
+
+    <div class="seccion-acero">
+        <p><b>Inf. Capa 1:</b></p>
+        <select id="barraTipo1">
+            <option value="1/2">Ø 1/2"</option>
+            <option value="5/8" selected>Ø 5/8"</option>
+            <option value="3/4">Ø 3/4"</option>
+            <option value="1">Ø 1"</option>
+        </select>
+        <input type="number" id="nCapa1" value="4">
+    </div>
+
+    <div class="seccion-acero">
+        <p><b>Inf. Capa 2:</b></p>
+        <select id="barraTipo2">
+            <option value="1/2" selected>Ø 1/2"</option>
+            <option value="5/8">Ø 5/8"</option>
+            <option value="3/4">Ø 3/4"</option>
+        </select>
+        <input type="number" id="nCapa2" value="0">
+    </div>
+
+    <div class="botones">
+        <button onclick="calcular()" class="btn-calc">Calcular y Graficar</button>
+        <button onclick="exportarPDF()" class="btn-pdf">Exportar PDF Pro</button>
+    </div>
+
+    <div id="resultado" class="resultado"></div>
+    <canvas id="grafico" width="400" height="420"></canvas>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

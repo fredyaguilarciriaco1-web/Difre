@@ -1,0 +1,16 @@
+body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #dfe6e9; padding: 10px; margin: 0; }
+.app { max-width: 440px; margin: auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+h2 { text-align: center; color: #2c3e50; margin-bottom: 15px; font-size: 1.4rem; }
+.grid-inputs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+.grid-inputs label { font-size: 11px; font-weight: bold; color: #34495e; }
+.seccion-acero { display: grid; grid-template-columns: 1.2fr 1fr 0.8fr; gap: 5px; align-items: center; margin-bottom: 8px; }
+.seccion-acero p { font-size: 13px; margin: 0; font-weight: bold; }
+input, select { padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; width: 100%; box-sizing: border-box; }
+.botones { display: flex; gap: 8px; margin-top: 15px; }
+button { flex: 1; padding: 12px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; color: white; transition: 0.3s; }
+.btn-calc { background: #0984e3; }
+.btn-pdf { background: #d63031; }
+.resultado { margin-top: 15px; padding: 12px; background: #fdfdfd; border-radius: 6px; font-size: 12.5px; line-height: 1.6; border: 1px solid #eee; }
+.alerta-roja { color: #d63031; font-weight: bold; background: #fff5f5; padding: 8px; border-radius: 4px; border: 1px solid #fab1a0; margin-bottom: 6px; }
+.alerta-verde { color: #27ae60; font-weight: bold; background: #f0fff4; padding: 8px; border-radius: 4px; border: 1px solid #2ecc71; margin-bottom: 6px; }
+canvas { display: block; margin-top: 15px; background: #f0f0f0; border: 1px solid #ccc; border-radius: 8px; width: 100%; height: auto; }
